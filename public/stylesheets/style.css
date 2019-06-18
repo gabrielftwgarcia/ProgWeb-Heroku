@@ -1,0 +1,307 @@
+@font-face {
+    font-family: "GeForce";
+    src: url(/fonts/GeForce/Geforce\ Bold.ttf);
+}
+
+@font-face {
+    font-family: "GeForceTrebuchet";
+    src: url(/fonts/GeForce/Trebuchet.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(/fonts/Roboto/Roboto-Light.ttf);
+}
+
+body {
+    margin: 0;
+}
+.container {
+    position: relative;
+}
+.centered-text {
+    text-align: center;
+}
+
+.headerWrapper {
+    width: 100%;
+    height: 44px;
+    background-color: white;
+}
+
+.headerWrapper .headerIcons {
+    background-repeat: no-repeat;
+    height: 50%;
+    top: 25%;
+    cursor: pointer;
+}
+
+.headerWrapper .headerIcons.nvidiaIcon {
+    width: 112px;
+    background-image: url(/images/nvidiaIcon.png);
+    background-size: 7rem;
+    left: 5%;
+    float: left;
+}
+
+.headerWrapper .headerIcons.userIcon {
+    width: 23px;
+    background-image: url(/images/userIcon.png);
+    background-size: 1.4rem;
+    right: 5%;
+    float: right;
+}
+
+.searchBar {
+    width: 35%;
+    height: 25px;
+    float: left;
+    margin-left: 30%
+}
+
+.menuBarWrapper {
+    background-color: black;
+    height: 5vh;
+    padding: 1% 0;
+    line-height: 5.5vh;
+}
+
+.menuBarWrapper .menuItem {
+    transform: scaleY(0.88);
+    float: left;
+    margin-left: 2.1%;
+    color: gray;
+    font-family: "GeForceTrebuchet";
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menuBarWrapper .menuItem:first-child {
+    margin-left: 7%;
+}
+
+.menuBarWrapper .menuItem:hover {
+    color: white;
+}
+
+.menuBarWrapper .menuItem span {
+    display: inline-block;
+    transform: scaleY(0.55);
+    transform: scale(0.9, 0.45);
+    margin-left: 7px;
+    bottom: 0.2vh;
+}
+
+.menuBarWrapper .menuItem:nth-child(5):hover {
+    color: #76b900;
+}
+
+.menuBarWrapper a.menuIcon {
+    display: none;
+    position: relative;
+    transform: scaleX(1.5);
+    right: 5%;
+    width: 20px;
+    color: white;
+    font-size: 18px;
+    float: right;
+}
+
+.bannerWrapper {
+
+    height: 555px;
+    /*background-image: url(/images/RTX2060.jpg);*/
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: black;
+}
+
+.bannerWrapper .bannerWrapperText {
+    position: absolute;
+    margin: 5.6% 4.2%;
+}
+
+.bannerWrapper .bannerWrapperText h1, .bannerWrapper .bannerWrapperText h2, .bannerWrapper .bannerWrapperText h3 {
+    margin: 0 auto;
+    font-family: "GeForce";
+}
+
+.bannerWrapper .bannerWrapperText h1 {
+    font-size: 54px;
+    color: white;
+}
+
+.bannerWrapper .bannerWrapperText h2, .bannerWrapper .bannerWrapperText h3 {
+    font-size: 31px;
+    margin-bottom: 6%;
+    color: #76b900;
+}
+
+.bannerWrapper .bannerWrapperText span {
+    border: 10px solid #76b900;
+    background-color: #76b900;
+    border-right-width: 14px;
+    border-left-width: 14px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bannerWrapper .bannerWrapperText span:hover {
+    background-color: #88d601;
+    border: 10px solid #88d601;
+    border-right-width: 14px;
+    border-left-width: 14px;
+}
+
+.bannerWrapper .bannerWrapperText h2 sup {
+    margin-left: -1.5%;
+    font-size: 0.5em;
+}
+
+.centered-text h2 {
+    margin-bottom: 0;
+    margin-top: 4%;
+    color: #76b900;
+    font-size: 33px;
+    font-family: "Roboto-Light";
+    font-weight: normal;
+}
+
+/* Estilizando tela de login */
+#modal-login{
+    position: fixed;
+    display: none;
+    /*Estado do display alterado no html*/
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+}
+
+.modal_box header {
+    position: relative;
+    background-color: #76b900;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px -21px;
+    height: 40px;
+    top: -21px;
+    line-height: 2.8vw;
+}
+
+.modal_box {
+    width: 350px;
+    border: 1px solid #eee;
+    background-color: white;
+    padding: 20px;
+    /* margin: 5% auto 15% auto; */
+}
+
+.modal_box-login {
+    height: 125px;
+    margin: 10% auto;
+}
+
+.button-group {
+    /* position: relative; */
+    margin: 6% auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    /* bottom: 5%; */
+}
+
+#modal-login span {
+    border: 2px solid #76b900;
+    background-color: #76b900;
+    border-right-width: 14px;
+    border-left-width: 14px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#modal-login span:hover {
+    background-color: #88d601;
+    border: 2px solid #88d601;
+    border-right-width: 14px;
+    border-left-width: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    .menuBarWrapper {
+        background-color: black;
+        height: 5vh;
+        padding: 8px 0;
+        line-height: 5vh;
+    }
+
+    .menuBarWrapper .menuItem {
+        display: none;
+    }
+
+    .menuBarWrapper a.menuIcon {
+        display: inline;
+        cursor: pointer;
+    }
+
+    .bannerWrapper .bannerWrapperText h1 {
+        font-size: 32px;
+        color: white;
+    }
+    
+    .bannerWrapper .bannerWrapperText h2 {
+        font-size: 18px;
+        margin-top: 2%;
+        margin-bottom: 9%;
+        color: #76b900;
+    }
+
+    .bannerWrapper .bannerWrapperText span {
+        border: 8px solid #76b900;
+        background-color: #76b900;
+        border-right-width: 10px;
+        border-left-width: 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .bannerWrapper .bannerWrapperText span:hover {
+        background-color: #88d601;
+        border: 8px solid #88d601;
+        border-right-width: 10px;
+        border-left-width: 10px;
+    }
+
+    .bannerWrapper {
+
+        height: 435px;
+        /*background-image: url(/images/RTX2060.jpg);*/
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-color: black;
+    }
+
+    .centered-text h2 {
+        margin-bottom: 0;
+        margin-top: 5.7%;
+        color: #76b900;
+        font-size: 21px;
+        font-family: "Roboto-Light";
+        font-weight: normal;
+    }
+}

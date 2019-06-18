@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+<title>Líder em Computação de Inteligência Artificial | NVIDIA</title>
+
+<head>
+    <link rel="icon" href="/images/nvidiaFavIcon.jpg">
+    <meta name="description"
+        content="Tecnologia de computação visual da NVIDIA: criadora da GPU, o que gera gráficos interativos em laptops, estações de trabalho, dispositivos móveis, notebooks ..." />
+</head>
+
+<body>
+    <h1>Login no sistema</h1>
+    <form action='/users/login' method="post">
+        <label>Login</label>
+        <br>
+        <input name="login" id="login" type="text" required>
+
+        <br><br>
+
+        <label>Senha</label>
+        <br>
+        <input name="senha" id="senha" type="password" required>
+
+        <br><br>
+
+        <input type="submit" value="Entrar"></input>
+    </form>
+
+    <br>
+
+    <button onclick="loginCadastrar()">Cadastrar</button>
+
+</body>
+
+</html>
+
+<script>
+
+    // TODO: login e email não podem repetir no banco!
+    function userLogin() {
+
+        if (document.getElementById('login').value === "" || document.getElementById('senha').value === "") {
+            alert("Os campos login e senha devem ser preenchidos para proceder!");
+        }
+
+    }
+
+    function loginCadastrar() {
+        window.location.href = "http://localhost:3000/registerUser";
+    }
+
+</script>

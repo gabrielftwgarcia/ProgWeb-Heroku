@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+<title>Líder em Computação de Inteligência Artificial | NVIDIA</title>
+<head>
+    <link rel="icon" href="/images/nvidiaFavIcon.jpg">
+    <meta name="description" content="Tecnologia de computação visual da NVIDIA: criadora da GPU, o que gera gráficos interativos em laptops, estações de trabalho, dispositivos móveis, notebooks ..."/>
+</head>
+
+<body>
+    <h1>Cadastro de informações</h1>
+    <form method="GET" action="">
+        <label>Nome da placa da série RTX:</label>
+        <input id="placaInfo" type="text">
+        
+        <br><br>
+
+        <label for="placaImagem">Imagem da placa:</label>
+        <input id="placaImagem" name="placaImagem" type="file" accept="image/png, image/jpeg">
+
+    </form>
+    
+    <br>
+
+    <button id="cadastrarBtn">Cadastrar</button>
+</body>
+
+</html>
+
+<script>
+    var add = addValor => {
+        console.log(document.getElementById('placaInfo').value);
+
+        if(document.getElementById('placaInfo').value.trim() === "" || document.getElementById('placaImagem').value === ""){
+            alert("É preciso que todos os campos sejam preenchidos para a inserção de valores!");
+        }
+        else{
+            alert("Insere no banco e redireciona p/ a página principal com os dados inseridos");
+
+            window.location.href = "http://localhost:3000/";
+
+        }
+        
+    }
+
+    // Quando clicar no botão cadastrar, executa a função addValor
+    document.getElementById('cadastrarBtn').onclick = add;
+
+</script>

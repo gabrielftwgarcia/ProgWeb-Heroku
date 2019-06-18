@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+<title>Líder em Computação de Inteligência Artificial | NVIDIA</title>
+
+<head>
+    <link rel="icon" href="/images/nvidiaFavIcon.jpg">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <meta name="description"
+        content="Tecnologia de computação visual da NVIDIA: criadora da GPU, o que gera gráficos interativos em laptops, estações de trabalho, dispositivos móveis, notebooks ..." />
+</head>
+
+<body>
+    <div class="headerWrapper">
+        <div class="container headerIcons nvidiaIcon"></div>
+        <form class="searchBar" action="/busca" method="post">
+            <div class="input">
+            <input type="text" id="search" name="search"></div>
+            <div><button type="submit">Buscar</button></div>
+        </form>
+        <div id="loginBtn" class="container headerIcons userIcon" onclick="abrirTelaLogin()"></div>
+    </div>
+
+    <!-- Criando um modal ao clicar no botão Adicionar relacionado à protocolo -->
+    {{!-- <div id="modal-login">
+        <div class="modal_box modal_box-login">
+            <header>Login no sistema</header>
+            <div class="input-field">
+                <label for="login"><b>Login </b></label>
+                <input id="login" type="text" value="">
+
+                <br>
+
+                <label for="senha"><b>Senha</b></label>
+                <input id="senha" type="password" value="">
+            </div>
+            <div class="button-group">
+                <form action='/users/' method="post">
+                    <input type="submit" value="Entrar"></input>
+                </form>
+                <button type="button"
+                    onclick="document.getElementById('modal-login').style.display='none'">Cancelar</button>
+                <span onclick="userCadastrar()">Cadastrar</span>
+            </div>
+        </div>
+    </div> --}}
+
+    <div class="menuBarWrapper">
+        <div class="menuItem">DRIVERS <span class="container">▼</span></div>
+        <div class="menuItem">PRODUTOS <span class="container">▼</span></div>
+        <div class="menuItem">DEEP LEARNING E AI <span class="container">▼</span></div>
+        <div class="menuItem">COMUNIDADES <span class="container">▼</span></div>
+        <div class="menuItem">SUPORTE</div>
+        <div class="menuItem">COMPRAR <span class="container">▼</span></div>
+        <div class="menuItem">SOBRE A NVIDIA <span class="container">▼</span></div>
+        <a class="menuIcon">&#9776;</a>
+    </div>
+
+    {{# each products }}
+        <div class="bannerWrapper">
+            <div class="bannerWrapperText">
+                <h1>RTX. CHEGOU A HORA.</h1>
+                <h2>{{this.description}}</h2>
+                <img src="{{{this.image}}}" alt="Erro"></img>
+                    <span class="container">SAIBA MAIS</span>
+            </div>
+        </div>
+    {{/each}}
+
+    <div class="centered-text">
+        <h2>GAMING</h2>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function userLogin() {
+
+        if (document.getElementById('login').value === "" || document.getElementById('senha').value === "") {
+            alert("Os campos login e senha devem ser preenchidos para proceder!");
+        }
+        else {
+            // redireciona para a página de cadastro de dados
+            alert("parebens pelo login")
+        }
+
+    }
+
+    function abrirTelaLogin(){
+        window.location.href = "http://localhost:3000/login";        
+    }
+
+</script>

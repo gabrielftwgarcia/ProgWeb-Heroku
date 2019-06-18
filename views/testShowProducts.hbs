@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+<title>Líder em Computação de Inteligência Artificial | NVIDIA</title>
+
+<head>
+    <link rel="icon" href="/images/nvidiaFavIcon.jpg">
+    <meta name="description"
+        content="Tecnologia de computação visual da NVIDIA: criadora da GPU, o que gera gráficos interativos em laptops, estações de trabalho, dispositivos móveis, notebooks ..." />
+</head>
+
+<body>
+        {{# each products }}
+            <article class="product">
+                <div>Frase: {{ this.description }}</div>
+                <div>"Imagem": {{ this.image }}</div>
+            </article>
+        {{/each}}
+</body>
+
+</html>

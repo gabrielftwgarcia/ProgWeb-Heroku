@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+<title>Líder em Computação de Inteligência Artificial | NVIDIA</title>
+
+<head>
+    <link rel="icon" href="/images/nvidiaFavIcon.jpg">
+    <meta name="description"
+        content="Tecnologia de computação visual da NVIDIA: criadora da GPU, o que gera gráficos interativos em laptops, estações de trabalho, dispositivos móveis, notebooks ..." />
+</head>
+
+<body>
+    <h1>Cadastro de usuários</h1>
+    <form action='/users/registerUser' method="post">
+        <label>Endereço</label>
+        <br>
+        <input name="endereco" id="endereco" type="text" required>
+
+        <br><br>
+
+        <label>Login</label>
+        <br>
+        <input name="login" id="login" type="text" required>
+
+        <br><br>
+
+        <label>Email</label>
+        <br>
+        <input name="email" id="email" type="email" required>
+
+        <br><br>
+
+        <label>Senha</label>
+        <br>
+        <input name="senha" id="senha" type="password" required>
+
+        <br><br>
+
+        <input type="submit" value="Cadastrar"></input>
+    </form>
+
+</body>
+
+</html>
+
+<script>
+
+    // TODO: login e email não podem repetir no banco!
+    function cadastrarUsuario() {
+        if (document.getElementById('login').value.trim() === "" ||
+            document.getElementById('senha').value.trim() === "" ||
+            document.getElementById('email').value.trim() === "") {
+            alert("Todos os campos devem ser preenchidos para proceder!");
+        }
+    }
+
+</script>
